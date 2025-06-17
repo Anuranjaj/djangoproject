@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+ {% block title %}
+    <title>addbook</title>
+    {% endblock %}
+
+{% block content %}
+<div class="container w-50 border border-2 shadow p-3 mt-4">
+<h2 class="text-center">Addbook(user defined)</h2>
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">title</label>
+        <input type="text" name="t" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">auther</label>
+        <input type="text" name="a"class="form-control">
+    </div><div class="mb-3">
+        <label class="form-label">price</label>
+        <input type="number" name="p" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">language</label>
+        <input type="text" name="l" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">page</label>
+        <input type="number" name="pa" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">image</label>
+        <input type="file" name="i" class="form-control">
+    </div>
+
+    <input type="submit" class="">
+</form>
+</div>
+{% endblock %}
